@@ -5,6 +5,7 @@ set softtabstop=2
 set shiftwidth=2
 set expandtab
 set autoindent
+set colorcolumn=80
 
 nnoremap <SPACE> <Nop>
 let mapleader = " "

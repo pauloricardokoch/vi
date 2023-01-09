@@ -12,7 +12,8 @@ an executable
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "elflord"
-vim.opt.colorcolumn = "79"
+vim.opt.colorcolumn = "80"
+vim.opt.relativenumber = true
 -- to disable icons and use a minimalist setup, uncomment the following
 -- lvim.use_icons = false
 
@@ -82,6 +83,10 @@ lvim.builtin.treesitter.ensure_installed = {
   "css",
   "rust",
   "java",
+  "yaml",
+  -- terraform
+  "hcl", 
+  "go",
   "yaml",
 }
 
