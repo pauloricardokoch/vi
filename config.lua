@@ -10,7 +10,7 @@ an executable
 
 -- general
 lvim.log.level = "warn"
-lvim.format_on_save = false
+lvim.format_on_save = true
 lvim.colorscheme = "elflord"
 vim.opt.colorcolumn = "80"
 vim.opt.relativenumber = true
@@ -32,19 +32,19 @@ lvim.keys.normal_mode["<S-h>"] = ":BufferLineCyclePrev<CR>"
 -- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
 local _, actions = pcall(require, "telescope.actions")
 lvim.builtin.telescope.defaults.mappings = {
-   -- for input mode
-   i = {
-     ["<C-j>"] = actions.move_selection_next,
-     ["<C-k>"] = actions.move_selection_previous,
-     ["<C-n>"] = actions.cycle_history_next,
-     ["<C-p>"] = actions.cycle_history_prev,
-   },
-   -- for normal mode
-   n = {
-     ["<C-j>"] = actions.move_selection_next,
-     ["<C-k>"] = actions.move_selection_previous,
-   },
- }
+  -- for input mode
+  i = {
+    ["<C-j>"] = actions.move_selection_next,
+    ["<C-k>"] = actions.move_selection_previous,
+    ["<C-n>"] = actions.cycle_history_next,
+    ["<C-p>"] = actions.cycle_history_prev,
+  },
+  -- for normal mode
+  n = {
+    ["<C-j>"] = actions.move_selection_next,
+    ["<C-k>"] = actions.move_selection_previous,
+  },
+}
 
 -- Change theme settings
 -- lvim.builtin.theme.options.dim_inactive = true
@@ -85,7 +85,7 @@ lvim.builtin.treesitter.ensure_installed = {
   "java",
   "yaml",
   -- terraform
-  "hcl", 
+  "hcl",
   "go",
   "yaml",
 }
